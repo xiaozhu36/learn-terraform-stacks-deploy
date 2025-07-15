@@ -4,3 +4,8 @@
 variable "bucket_id" {
   type = string
 }
+
+variable "name" {
+  default = "xiaozhu-test"
+  type    = string
+}

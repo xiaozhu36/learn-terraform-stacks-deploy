@@ -29,3 +29,8 @@ module "s3-new" {
   prefix = "xiaozhu-test-stack-with-module"
   length = 4
 }
+
+variable "name" {
+  default = "xiaozhu-test"
+  type    = string
+}

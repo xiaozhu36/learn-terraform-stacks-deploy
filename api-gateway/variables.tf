@@ -8,3 +8,8 @@ variable "lambda_function_name" {
 variable "lambda_invoke_arn" {
   type = string
 }
+
+variable "name" {
+  default = "xiaozhu-test"
+  type    = string
+}
