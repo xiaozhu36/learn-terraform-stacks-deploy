@@ -1,9 +1,6 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
-
 resource "random_pet" "lambda_bucket_name" {
-  prefix = "hello-world-lambda"
-  length = 2
+  prefix = var.prefix
+  length = var.length
 }
 
 resource "aws_s3_bucket" "lambda_bucket" {
@@ -22,10 +19,4 @@ resource "aws_s3_bucket_acl" "bucket_acl" {
 
   bucket = aws_s3_bucket.lambda_bucket.id
   acl    = "private"
-}
-
-module "s3-new" {
-  source = "../modules/s3"
-  prefix = "xiaozhu-test-stack-with-module"
-  length = 4
 }
