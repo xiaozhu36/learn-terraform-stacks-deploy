@@ -23,6 +23,6 @@ deployment "development" {
 #   }
 # }
 
-publish_output "bucket_name" {
-  value = deployment.s3.outputs.bucket_id
+publish_output "bucket_names" {
+  value = deployment.development.outputs.s3_bucket
 }
