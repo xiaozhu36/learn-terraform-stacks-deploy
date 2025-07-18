@@ -19,3 +19,8 @@ variable "default_tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "bucket_name" {
+  description = "Whether to apply default tags to all AWS resources"
+  type        = string
+}

@@ -23,7 +23,8 @@ component "lambda" {
 
   inputs = {
     region    = var.regions
-    bucket_id = component.s3[each.value].bucket_id
+    # bucket_id = component.s3[each.value].bucket_id
+    bucket_id = var.bucket_name
   }
 
   providers = {
