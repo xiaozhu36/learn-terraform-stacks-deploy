@@ -5,7 +5,7 @@ output "lambda_urls" {
 }
 
 output "s3_bucket" {
-  type = map(string)
+  type = list(string)
   description = "S3 bucket names"
   value = [ for x in component.s3: x.bucket_id ]
 }
