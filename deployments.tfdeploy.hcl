@@ -20,7 +20,7 @@ deployment "production" {
     role_arn       = "arn:aws:iam::954932251222:role/stacks-xiaozhu-prj-AVstYBB7RFBWZf6s"
     identity_token = identity_token.aws.jwt
     default_tags   = { stacks-preview-example = "lambda-component-expansion-stack" }
-    buckent_name = upstaream_input.upstream_stack_name.bucket_name
+    buckent_name = upstaream_input.upstream_stack_name.bucket_names[0]
   }
 }
 
