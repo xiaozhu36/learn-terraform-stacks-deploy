@@ -24,5 +24,5 @@ deployment "development" {
 # }
 
 publish_output "bucket_names" {
-  value = deployment.development.outputs.s3_bucket
+  value = deployment.development.s3_bucket
 }
