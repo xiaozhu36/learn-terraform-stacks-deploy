@@ -19,3 +19,8 @@ variable "default_tags" {
   type        = map(string)
   default     = {}
 }
+
+
+variable "iam_role" {
+  type = string
+}
