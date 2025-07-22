@@ -11,16 +11,7 @@ deployment "development" {
     role_arn       = "arn:aws:iam::954932251222:role/stacks-xiaozhu-prj-AVstYBB7RFBWZf6s"
     identity_token = identity_token.aws.jwt
     default_tags   = { stacks-preview-example = "lambda-component-expansion-stack" }
-    iam_role = local.project_role
   }
-}
-
-data "aws_iam_roles" "roles" {
-  name_regex = "^Spinnaker.*"
-}
-
-locals {
-  project_role = data.aws_iam_roles.roles.names[0]
 }
 
 # deployment "production" {
